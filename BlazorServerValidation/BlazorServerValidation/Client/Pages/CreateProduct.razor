@@ -1,0 +1,22 @@
+﻿@inherits BasePage
+@page "/products/create"
+
+<h3>CreateProduct</h3>
+
+<EditForm Model="Model" OnSubmit="OnSubmit">
+    <FormValidator @ref="FormValidator" />
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group row">
+                <label for="name" class="col-sm-3">Nazwa:</label>
+                <InputText id="name" class="form-control col-sm-8" @bind-Value="@Model.Name"></InputText>
+                <ValidationMessage class="offset-sm-3 col-sm-8" For="@(() => Model.Name)" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-primary">Zapisz</button>
+        </div>
+    </div>
+</EditForm>

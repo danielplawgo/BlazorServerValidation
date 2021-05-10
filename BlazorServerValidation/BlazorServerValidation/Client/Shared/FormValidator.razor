@@ -1,0 +1,15 @@
+﻿@if (string.IsNullOrEmpty(Message) == false)
+{
+    if (Type == MessageType.Success)
+    {
+        <div class="alert alert-success" role="alert">
+            @Message
+        </div>
+    }
+    else if (Type == MessageType.Error)
+    {
+        <div class="alert alert-danger" role="alert">
+            @Message
+        </div>
+    }
+}
